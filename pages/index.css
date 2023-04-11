@@ -60,3 +60,26 @@
     background-position: center;
     margin-right: 24px;
 }
+.cards {
+    /fonts/
+}
+.card {
+    display: grid;
+}
+.card__image {
+    width: 282px;
+    height: 282px;
+}
+.card__description {
+    display: flex;
+    background-color: white;
+    color: black;
+    padding-top: 25px;
+    padding-bottom: 25px;
+    padding-left: 20px;
+}
+.card__like-button {
+    background: transparent url(../images/like-inactive.svg) center no-repeat;
+    width: 21px;
+    height: 18px;
+}
