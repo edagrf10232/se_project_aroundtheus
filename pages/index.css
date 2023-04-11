@@ -25,6 +25,7 @@
     display: grid;
     grid-template-areas: "title button" "description description";
     grid-template-columns: minmax(auto, 373px) auto;
+    align-items: center;
 }
 .profile__edit-button {
     background: transparent url(../images/edit-button.svg)  center no-repeat;
@@ -44,6 +45,7 @@
     font-weight: 500;
     grid-area: title;
     margin: 0;
+    font-family: 'Inter', sans-serif;
 }
 .profile__description {
     font-size: 18px;
@@ -51,6 +53,7 @@
     font-weight: 400;
     grid-area: description;
     margin: 0;
+    font-family: 'Inter', sans-serif;
 }
 .profile__image {
     height: 120px;
@@ -61,10 +64,21 @@
     margin-right: 24px;
 }
 .cards {
-    /fonts/
+    margin-top: 30px;
+}
+.card__list {
+    display: grid;
+    justify-content: center;
+    grid-template-columns: repeat(auto-fit,282px);
+    grid-gap: 20px 17px;
+    padding: 0;
+    margin: 0;
 }
 .card {
-    display: grid;
+    display: flex;
+    flex-direction: column;
+    list-style: none;
+    border-radius: 10%;
 }
 .card__image {
     width: 282px;
@@ -77,9 +91,54 @@
     padding-top: 25px;
     padding-bottom: 25px;
     padding-left: 20px;
+    padding-right: 20px;
+    align-items: center;
+    justify-content: space-between;
+    text-overflow: ellipsis;
+    border-bottom-right-radius: 10px;
+    border-bottom-left-radius: 10px;
+    font-family: 'Inter', sans-serif;
+}
+.card__title {
+    text-overflow: ellipsis;
+    overflow: hidden;
+    max-width: 220px;
+    margin: 0;
+    white-space: nowrap;
 }
 .card__like-button {
     background: transparent url(../images/like-inactive.svg) center no-repeat;
     width: 21px;
     height: 18px;
+    border: 0;
+
+}
+@media screen and (max-width: 480px) {
+    .profile {
+        flex-direction: column;
+    }
+    .profile__info {
+        display: flex;
+        flex-wrap: wrap;
+        width: 100%;
+        justify-content: center;
+    }
+    .profile__description {
+        width: 100%;
+        text-align: center;
+    }
+    .profile__add-button {
+        margin: 0;
+        width: 100%;
+    }
+}
+.footer {
+    
+}
+.footer__copyright {
+    color: #545454;
+    height: 18px;
+    padding-top: 67px;
+    margin: 0;
+    width: 100%;
 }
