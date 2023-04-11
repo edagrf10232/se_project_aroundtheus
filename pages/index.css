@@ -32,12 +32,15 @@
     height: 24px;
     width: 24px;
     grid-area: button;
+    border: 1px solid #FFFFFF;
 }
 .profile__add-button {
     background: transparent url(../images/add-icon.svg)  center no-repeat;
     width: 150px;
     height: 50px;
     margin-left: auto;
+    border: 2px solid #FFFFFF;
+    border-radius: 2px;
 }
 .profile__title {
     font-size: 42px;
@@ -113,6 +116,12 @@
     border: 0;
 
 }
+.card__like-button:hover {
+    background: transparent url(../images/like-button-hover.svg) center no-repeat;
+    width: 21px;
+    height: 18px;
+    border: 0;
+}
 @media screen and (max-width: 480px) {
     .profile {
         flex-direction: column;
@@ -139,6 +148,8 @@
     color: #545454;
     height: 18px;
     padding-top: 67px;
-    margin: 0;
+    max-width: 880px;
     width: 100%;
+    position: relative;
+    margin: 0 auto;
 }
