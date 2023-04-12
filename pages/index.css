@@ -1,6 +1,7 @@
 .page {
     background-color: black;
     color: white;
+    font-family: 'Inter', sans-serif;
 }
 .page__section {
     max-width: 880px;
@@ -48,7 +49,6 @@
     font-weight: 500;
     grid-area: title;
     margin: 0;
-    font-family: 'Inter', sans-serif;
 }
 .profile__description {
     font-size: 18px;
@@ -56,7 +56,6 @@
     font-weight: 400;
     grid-area: description;
     margin: 0;
-    font-family: 'Inter', sans-serif;
 }
 .profile__image {
     height: 120px;
@@ -100,7 +99,6 @@
     text-overflow: ellipsis;
     border-bottom-right-radius: 10px;
     border-bottom-left-radius: 10px;
-    font-family: 'Inter', sans-serif;
 }
 .card__title {
     text-overflow: ellipsis;
