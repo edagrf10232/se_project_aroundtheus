@@ -5,11 +5,22 @@
     padding-top: 45px;
     margin: auto;
 }
+.header__line {
+    max-width: 880px;
+    width: 100%;
+    position: absolute;
+    margin: 0;
+    display: flex;
+    padding-top: 41px;
+}
 @media screen and (max-width: 320px) {
 .header {
     display: flex;
     padding-top: 28px;
     height: 24px;
     margin: auto;
+}
+.header__line {
+    padding-top: 32px;
 }
 }
