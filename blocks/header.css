@@ -1,6 +1,15 @@
+.header {
+    max-width: 880px;
+    width: 100%;
+    position: relative;
+    padding-top: 45px;
+    margin: auto;
+}
 @media screen and (max-width: 320px) {
-.header.page__section {
+.header {
     display: flex;
-    padding-left: 40px;
+    padding-top: 28px;
+    height: 24px;
+    margin: auto;
 }
 }
