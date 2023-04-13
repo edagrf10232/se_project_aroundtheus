@@ -64,6 +64,7 @@
     .profile__image {
         justify-content: center;
         margin: 0;
+        margin-bottom: 26.25px;
     }
     .profile__info {
         display: flex;
@@ -96,8 +97,5 @@
     margin-left: 10px;
     width: 18px;
     height: 18px;
-}
-.profile__image {
-    margin-bottom: 26.25px;
 }
 }
