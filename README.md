@@ -11,6 +11,6 @@
 This project combines the use of HTNL and CSS in order to follow a figma reference. Grid Layouts and media queiries are also used in this project. 
   
 ## Github ##
-  edagrf10232.github.io
+ https://edagrf10232.github.io/se_project_aroundtheus/
   
 
