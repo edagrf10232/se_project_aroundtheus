@@ -12,6 +12,9 @@
     margin: 0;
     display: flex;
     padding-top: 41px;
+    color: #545454;
+    opacity: .7;
+
 }
 @media screen and (max-width: 320px) {
 .header {
@@ -21,6 +24,6 @@
     margin: auto;
 }
 .header__line {
-    padding-top: 32px;
+    padding-top: 56px;
 }
 }
