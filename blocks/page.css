@@ -8,7 +8,6 @@
     width: 100%;
     position: relative;
     margin: 0 auto;
-    margin-top: 36.25px;
     justify-content: center;
 }
 .page__content {
@@ -20,7 +19,7 @@
     .page__section {
         display: flex;
         align-items: center;
-        padding-top: 70.25px;
+        padding-top: 38.25px;
         margin: 0;
     }
 }
