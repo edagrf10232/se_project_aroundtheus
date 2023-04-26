@@ -2,11 +2,12 @@
     display: flex;
     flex-direction: column;
     list-style: none;
-    border-radius: 10%;
 }
 .card__image {
     width: 282px;
     height: 282px;
+    border-top-right-radius: 10px;
+    border-top-left-radius: 10px;;
 }
 .card__description {
     display: flex;
