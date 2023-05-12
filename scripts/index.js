@@ -99,7 +99,7 @@ name,
 link,
     })
     cardsWrap.prepend(cardElement);
-    closePopup(addCardModal);
+    closePopup(addCardModal).reset(getCardElement);
 }
 
 function openModal(modal) {

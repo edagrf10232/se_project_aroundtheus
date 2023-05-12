@@ -1,5 +1,8 @@
 .modal {
-    transition: visibilty 0s 0.5s, opacity 0.5s linear;
+    visibility: none;
+    opacity: 0;
+    pointer-events: none;
+    transition: visibility 0s 0.5s, opacity 0.5s linear;
     position: fixed;
     top: 0;
     left: 0;
@@ -9,11 +12,14 @@
     z-index: 999;
     padding: 0 19;
     font-family: 'Inter', sans-serif;
-    display: none;
+    display: flex;
 }
 
 .modal_opened {
-    display: flex;
+    visibility: visible;
+    opacity: 1;
+    pointer-events: all;
+    transition: visibility 0s, opacity 0.5s linear;
 }
 .modal__container {
     position: relative;
@@ -37,7 +43,7 @@
     background-size: contain;
 }
 .modal__close:hover {
-    cursor: pointer;
+    opacity: .6;
 }
 .modal__heading {
     margin-top: 0px;
@@ -70,9 +76,10 @@
     margin-top: 19px;
     height: 50.15px;
     border: none;
+    cursor: pointer;
 }
 .modal__button:hover {
-    cursor: pointer;
+    opacity: .6;
 }
 .modal__container-image {
     display: grid;
