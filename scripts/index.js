@@ -43,7 +43,7 @@ const addCardForm = addCardModal.querySelector(".modal__form");
 const cardTitleInput = addCardForm.querySelector(".modal__input_type_title");
 const cardUrlInput = addCardForm.querySelector(".modal__input_type_url");
 const previewImageModal = document.querySelector('#preview-image-modal');
-const imageCloseButton = previewImageModal.querySelector("#image-close-button");
+const imageCloseButton = previewImageModal.querySelector(".modal__close-image");
 const imageElement = document.querySelector('.modal__card-preview');
 const imageCaption = document.querySelector('.modal__image-caption');
 
@@ -54,7 +54,7 @@ function renderCard(cardData) {
     const cardElement = getCardElement(cardData);
     cardsWrap.prepend(cardElement);
 }
-function getCardElement(cardData, wrapper) {
+function getCardElement(cardData) {
     const cardElement = cardTemplate.cloneNode(true);
     const cardImageEl = cardElement.querySelector(".card__image");
     const cardTitleEl = cardElement.querySelector(".card__title");
@@ -123,7 +123,4 @@ initialCards.forEach((cardData) => {
     cardsWrap.prepend(getCardElement(cardData));
 });
 // Image Modal //
-cardImageEl.addEventListener('click', () => openModal(previewImageModal));
-previewImageModal.src = cardImageEl.src;
-
 imageCloseButton.addEventListener("click", () => closePopup(previewImageModal));
