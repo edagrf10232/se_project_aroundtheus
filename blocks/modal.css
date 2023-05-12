@@ -19,7 +19,7 @@
     position: relative;
     padding: 36px;
     background-color: #fff;
-    margin: auto; 
+    margin: auto;
     border-radius: 10px;
     max-width: 430px;
 }
@@ -87,7 +87,7 @@
         padding: 22px;
     }
     .modal__button {
-       max-width: 238px
+       max-width: 238px;
     }
     .modal__heading {
         width: 238px;
