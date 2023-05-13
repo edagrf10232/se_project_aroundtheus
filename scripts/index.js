@@ -95,8 +95,8 @@ function handleAddCardFormSubmit(e) {
     const name = cardTitleInput.value;
     const link = cardUrlInput.value;
     const cardElement = getCardElement({
-name,
-link,
+name;
+link;
     })
     cardsWrap.prepend(cardElement);
     closePopup(addCardModal)
