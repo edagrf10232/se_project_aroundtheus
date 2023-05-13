@@ -69,7 +69,7 @@ function getCardElement(cardData) {
     });
 
     likeButton.addEventListener("click", () => {
-    likeButton.classList.toggle("card__like-button_active");
+        likeButton.classList.toggle("card__like-button_active");
     });
 
     cardTitleEl.textContent = cardData.name;
@@ -95,8 +95,8 @@ function handleAddCardFormSubmit(e) {
     const name = cardTitleInput.value;
     const link = cardUrlInput.value;
     const cardElement = getCardElement({
-name;
-link;
+        name,
+        link,
     })
     cardsWrap.prepend(cardElement);
     closePopup(addCardModal)
