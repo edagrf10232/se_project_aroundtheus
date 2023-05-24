@@ -95,6 +95,25 @@
     z-index: 120;
     top: -10px;
   }
+  .modal__error_visible {
+    font-family: "Inter", Arial, sans-serif;
+    font-style: normal;
+    font-size: 12px;
+    font-weight: 400;
+    color: #ff0000;
+    margin-left: 0;
+    transition: opacity 0.3s ease;
+    border: none;
+    display: flex;
+}
+  
+  .modal__error:first-of-type {
+    padding-top: 5px;
+  }
+  
+  .modal__error:last-of-type {
+    padding-top: 5px;
+  }
 @media screen and (max-width: 320px) {
     .modal__form {
         max-width: 238px;
