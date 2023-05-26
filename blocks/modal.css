@@ -107,10 +107,6 @@
     display: flex;
 }
   
-  .modal__error:first-of-type {
-    padding-top: 5px;
-  }
-  
   .modal__error:last-of-type {
     padding-top: 5px;
   }

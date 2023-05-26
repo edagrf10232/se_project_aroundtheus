@@ -99,7 +99,7 @@ function handleAddCardFormSubmit(e) {
         link,
     })
     cardsWrap.prepend(cardElement);
-    closePopup(addCardModal)
+    closePopup(addCardModal);
     addCardForm.reset();
 }
 
@@ -125,3 +125,46 @@ initialCards.forEach((cardData) => {
 });
 // Image Modal //
 imageCloseButton.addEventListener("click", () => closePopup(previewImageModal));
+document.addEventListener('keydown', (e) => {
+    console.log(e.key);
+    if(
+      e.key === "Escape"
+    )
+    closePopup(profileEditModal);
+  });
+handleClickOutsideProfile();
+function handleClickOutsideProfile(modal) {
+  document.addEventListener("mousedown", (e) => {
+    if (
+      e.target.classList.contains("modal") ||
+      e.target.classList.contains("modal__close")
+    ) {
+      closePopup(profileEditModal);
+    }
+  });
+}
+
+handleClickOutsideCard();
+function handleClickOutsideCard(modal) {
+  document.addEventListener("mousedown", (e) => {
+    if (
+      e.target.classList.contains("modal") ||
+      e.target.classList.contains("modal__close")
+    ) {
+      closePopup(addCardModal);
+    }
+  });
+}
+
+handleClickOutsideImage();
+function handleClickOutsideImage(modal) {
+  imageProfileModal.addEventListener("mousedown", (e) => {
+    console.log(e.target);
+    if (
+      e.target.classList.contains("modal") ||
+      e.target.classList.contains("modal__close")
+    ) {
+      closePopup(previewImageModal);
+    }
+  });
+}
