@@ -27,24 +27,22 @@ function checkInputValidity(formEl, inputEl, options) {
       submitButton.disabled = true;
       return;
     }
+  else {
   
     submitButton.classList.remove(inactiveButtonClass);
     submitButton.disabled = false;
   }
+  }
   
   function setEventListeners(formEl, options) {
     const { inputSelector } = options;
-    const inputEls = [...formEl.querySelectorAll(inputSelector)];
-    const submitButton = formEl.querySelector(options.submitButtonSelector);
-  
-    toggleButtonState(inputEls, submitButton, options);
-    inputEls.forEach((inputEl) => {
-      inputEl.addEventListener("input", (e) => {
-        checkInputValidity(formEl, inputEl, options);
-        toggleButtonState(inputEls, submitButton, options);
-      });
+    const inputEls = [...formEl.querySelectorAll(options.inputSelector)];
+    inputEls.forEach(function (inputEl) {
+        inputEl.addEventListener("input", function (e) {
+            checkInputValidty(formEl, inputEl, options);
+        });
     });
-  }
+}
   function enableValidation(options) {
     const formEls = [...document.querySelectorAll(options.formSelector)];
     formEls.forEach((formEl) => {

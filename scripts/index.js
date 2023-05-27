@@ -102,10 +102,7 @@ function handleAddCardFormSubmit(e) {
     cardsWrap.prepend(cardElement);
     closePopup(addCardModal);
     addCardForm.reset();
-    toggleButtonState(
-      [cardTitleInput, cardUrlInput],
-      addNewCardButton,
-      config);
+    toggleButtonState(addNewCardButton, config);
 }
 function openModal(modal) {
     modal.classList.add("modal_opened");
@@ -137,40 +134,48 @@ function closeModalByEscape(evt) {
      closePopup(openedModal);
   }
 } 
+function closeModalOnRemoteClick(evt) {
+  // target is the element on which the event happened
+  // currentTarget is the modal
+  // if they are the same then we should close the modal
+  if (evt.target === evt.currentTarget || evt.target.classList.contains("modal__close")) { 
+     closePopup(evt.target)
+  }
+} 
+profileEditModal.addEventListener("mousedown", closeModalOnRemoteClick)
+addCardModal.addEventListener("mousedown", closeModalOnRemoteClick)
+previewImageModal.addEventListener("mousedown", closeModalOnRemoteClick)  
+// handleClickOutsideProfile();
+// function handleClickOutsideProfile(modal) {
+//   document.addEventListener("mousedown", (e) => {
+//     if (
+//       e.target.classList.contains("modal") ||
+//       e.target.classList.contains("modal__close")
+//     ) {
+//       closePopup(profileEditModal);
+//     }
+//   });
 
-handleClickOutsideProfile();
-function handleClickOutsideProfile(modal) {
-  document.addEventListener("mousedown", (e) => {
-    if (
-      e.target.classList.contains("modal") ||
-      e.target.classList.contains("modal__close")
-    ) {
-      closePopup(profileEditModal);
-    }
-  });
-}
+// handleClickOutsideCard();
+// function handleClickOutsideCard(modal) {
+//   document.addEventListener("mousedown", (e) => {
+//     if (
+//       e.target.classList.contains("modal") ||
+//       e.target.classList.contains("modal__close")
+//     ) {
+//       closePopup(addCardModal);
+//     }
+//   });
+// }
 
-handleClickOutsideCard();
-function handleClickOutsideCard(modal) {
-  document.addEventListener("mousedown", (e) => {
-    if (
-      e.target.classList.contains("modal") ||
-      e.target.classList.contains("modal__close")
-    ) {
-      closePopup(addCardModal);
-    }
-  });
-}
-
-handleClickOutsideImage();
-function handleClickOutsideImage(modal) {
-  previewImageModal.addEventListener("mousedown", (e) => {
-    console.log(e.target);
-    if (
-      e.target.classList.contains("modal") ||
-      e.target.classList.contains("modal__close")
-    ) {
-      closePopup(previewImageModal);
-    }
-  });
-}
+// handleClickOutsideImage();
+// function handleClickOutsideImage(modal) {
+//   previewImageModal.addEventListener("mousedown", (e) => {
+//     console.log(e.target);
+//     if (
+//       e.target.classList.contains("modal") ||
+//       e.target.classList.contains("modal__close")
+//     ) {
+//       closePopup(previewImageModal);
+//     }
+//   });
