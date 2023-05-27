@@ -4,13 +4,13 @@ function showInputError(formEl, inputEl, { inputErrorClass, errorClass }) {
   errorMessageEl.textContent = inputEl.validationMessage; 
   errorMessageEl.classList.add(errorClass); 
 }
-function hideInputError(formEl, inputEl, { inputErrorClass, errorClass }) { 
-  let element = `#${inputEl.id}-error`; 
-  const errorMessageEl= formEl.querySelector(element); 
-  inputEl.classList.remove(inputErrorClass); 
-  errorMessageEl.textContent = ''; 
-  errorMessageEl.classList.remove(errorClass); 
-  }
+function hideInputError(formEl, inputEl, { inputErrorClass, errorClass }) {
+  const element = `#${inputEl.id}-error`;
+  const errorMessageEl = formEl.querySelector(element);
+  inputEl.classList.remove(inputErrorClass);
+  errorMessageEl.textContent = "";
+  errorMessageEl.classList.remove(errorClass);
+}
 function checkInputValidity(formEl, inputEl, options) { 
   if (!inputEl.validity.valid) { 
     return showInputError(formEl, inputEl, options); 
@@ -60,7 +60,7 @@ function checkInputValidity(formEl, inputEl, options) {
     inputSelector: ".modal__input",
     submitButtonSelector: ".modal__button",
     inactiveButtonClass: "modal__button_disabled",
-    inputErrorClass: ".modal__input_error",
+    inputErrorClass: "modal__input_error",
     errorClass: "modal__error_visible",
   };
   enableValidation(config);

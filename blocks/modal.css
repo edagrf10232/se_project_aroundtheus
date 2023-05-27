@@ -110,7 +110,7 @@
     opacity: .6;
 }
 .modal__input_error {
-    border-bottom: #ff0000;
+    border-bottom: 1px solid #ff0000;
 }
   .modal__error:last-of-type {
     padding-top: 5px;
