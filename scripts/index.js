@@ -49,6 +49,7 @@ const imageCaption = document.querySelector('.modal__image-caption');
 
 function closePopup(modal) {
     modal.classList.remove("modal_opened");
+    document.removeEventListener("keydown", closeModalByEscape);
 }
 function renderCard(cardData) {
     const cardElement = getCardElement(cardData);
@@ -101,10 +102,14 @@ function handleAddCardFormSubmit(e) {
     cardsWrap.prepend(cardElement);
     closePopup(addCardModal);
     addCardForm.reset();
+    toggleButtonState(
+      [cardTitleInput, cardUrlInput],
+      addNewCardButton,
+      config);
 }
-
 function openModal(modal) {
     modal.classList.add("modal_opened");
+    document.addEventListener("keydown", closeModalByEscape);
 }
 profileEditButton.addEventListener("click", () => {
     profileTitleInput.value = profileTitle.textContent;
@@ -125,13 +130,14 @@ initialCards.forEach((cardData) => {
 });
 // Image Modal //
 imageCloseButton.addEventListener("click", () => closePopup(previewImageModal));
-document.addEventListener('keydown', (e) => {
-    console.log(e.key);
-    if(
-      e.key === "Escape"
-    )
-    closePopup(profileEditModal);
-  });
+
+function closeModalByEscape(evt) {
+  if (evt.key === "Escape") {
+    const openedModal = document.querySelector('.modal_opened');
+     closePopup(openedModal);
+  }
+} 
+
 handleClickOutsideProfile();
 function handleClickOutsideProfile(modal) {
   document.addEventListener("mousedown", (e) => {
@@ -158,7 +164,7 @@ function handleClickOutsideCard(modal) {
 
 handleClickOutsideImage();
 function handleClickOutsideImage(modal) {
-  imageProfileModal.addEventListener("mousedown", (e) => {
+  previewImageModal.addEventListener("mousedown", (e) => {
     console.log(e.target);
     if (
       e.target.classList.contains("modal") ||
