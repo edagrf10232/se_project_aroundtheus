@@ -102,7 +102,7 @@ function handleAddCardFormSubmit(e) {
     cardsWrap.prepend(cardElement);
     closePopup(addCardModal);
     addCardForm.reset();
-    toggleButtonState(addNewCardButton, config);
+    toggleButtonState([cardTitleInput, cardUrlInput], addNewCardButton, config);
 }
 function openModal(modal) {
     modal.classList.add("modal_opened");
