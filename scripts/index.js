@@ -42,6 +42,7 @@ const addNewCardButton = document.querySelector('.profile__add-button');
 const addCardForm = addCardModal.querySelector(".modal__form");
 const cardTitleInput = addCardForm.querySelector(".modal__input_type_title");
 const cardUrlInput = addCardForm.querySelector(".modal__input_type_url");
+const addCardSubmit = addCardForm.querySelector('#add-card-button');
 const previewImageModal = document.querySelector('#preview-image-modal');
 const imageCloseButton = previewImageModal.querySelector(".modal__close-image");
 const imageElement = document.querySelector('.modal__card-preview');
@@ -102,7 +103,7 @@ function handleAddCardFormSubmit(e) {
     cardsWrap.prepend(cardElement);
     closePopup(addCardModal);
     addCardForm.reset();
-    toggleButtonState([cardTitleInput, cardUrlInput], addNewCardButton, config);
+    toggleButtonState([cardTitleInput, cardUrlInput], addCardSubmit, config);
 }
 function openModal(modal) {
     modal.classList.add("modal_opened");
