@@ -25,11 +25,10 @@ function checkInputValidity(formEl, inputEl, options) {
     if (hasInvalidInput(inputEls)) {
       submitButton.classList.add(inactiveButtonClass);
       submitButton.disabled = true;
-    }
-     else {
-    submitButton.classList.remove(inactiveButtonClass);
-    submitButton.disabled = false;
-     }
+    } else {
+      submitButton.classList.remove(inactiveButtonClass);
+      submitButton.disabled = false;
+  }
   }
   function setEventListeners(formEl, options) {
     const { inputSelector } = options;
